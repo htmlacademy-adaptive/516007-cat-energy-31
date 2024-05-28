@@ -1,0 +1,21 @@
+.all-product__title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $special-black;
+}
+
+.all-product__text {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: $dark-grey;
+}
+
+.all-product__link {
+  background-color: $bg-grey;
+  color: $dark-grey;
+}
