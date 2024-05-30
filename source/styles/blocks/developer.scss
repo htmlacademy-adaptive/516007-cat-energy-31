@@ -4,3 +4,11 @@
   line-height: 20px;
   color: $dark-grey;
 }
+
+.developer__link {
+  width: 27px;
+  height: 24px;
+  display: block;
+  background-color: $icon-grey;
+  mask-image: url("../../icons/stack.svg#html-academy");
+}

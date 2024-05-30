@@ -7,4 +7,36 @@
 
 .features__item {
   color: $dark-grey;
+  position: relative;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $basic-green;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 45%;
+  }
+}
+
+.features__item--benefit::before {
+  background-image: url("../../icons/stack.svg#leaf");
+}
+
+.features__item--composition::before {
+  background-image: url("../../icons/stack.svg#powder");
+}
+
+.features__item--nutrition::before {
+  background-image: url("../../icons/stack.svg#cutlery");
+}
+
+.features__item--change::before {
+  background-image: url("../../icons/stack.svg#clock");
 }

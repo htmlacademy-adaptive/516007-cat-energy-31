@@ -20,9 +20,9 @@
       </a>
         <nav class="main-nav">
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Открыть меню/Закрыть меню</span>
           </button>
-          <ul class="main-nav__list">
+          <ul class="main-nav__list list">
             <li class="main-nav__item main-nav__item--active">
               <a class="main-nav__link" href="#">Главная</a>
             </li>
@@ -55,12 +55,12 @@
         <h2 class="visually-hidden">Варианты предоставляемых услуг</h2>
         <ul class="services__list list">
           <li class="services__item">
-            <h3 class="services__title">Похудение</h3>
+            <h3 class="services__title services__title--slim">Похудение</h3>
             <p class="services__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="services__link" href="#">Каталог Slim</a>
           </li>
           <li class="services__item">
-            <h3 class="services__title">Набор массы</h3>
+            <h3 class="services__title services__title--pro">Набор массы</h3>
             <p class="services__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="services__link" href="#">Каталог Pro</a>
           </li>
@@ -111,11 +111,9 @@
             </li>
           </ul>
           <div class="slider__toggle">
-            <button class="slider__button slider__button--prev" type="button"
-              aria-label="Переключает изображения с котами назад">Было</button>
-            <span class="slider__range"></span>
-            <button class="slider__button slider__button--next" type="button"
-              aria-label="Переключает изображения с котами вперед">Стало</button>
+            <button class="slider__button" type="button">
+              <span class="visually-hidden">Ползунок слайдера</span>
+            </button>
           </div>
         </div>
       </section>

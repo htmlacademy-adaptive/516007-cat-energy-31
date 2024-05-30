@@ -1,0 +1,24 @@
+.social {
+  display: grid;
+}
+
+.social__media-link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  mask-repeat: no-repeat;
+  background-color: $icon-grey;
+  mask-position: center;
+}
+
+.social__media-link--vkontakte {
+  mask-image: url("../../icons/stack.svg#vk");
+}
+
+.social__media-link--youtube {
+  mask-image: url("../../icons/stack.svg#youtube");
+}
+
+.social__media-link--telegram {
+  mask-image: url("../../icons/stack.svg#telegram");
+}

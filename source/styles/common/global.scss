@@ -5,6 +5,10 @@ body {
   color: $basic-black;
 }
 
+.list {
+  list-style: none;
+}
+
 *,
 *::before,
 *::after {

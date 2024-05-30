@@ -19,3 +19,28 @@
   background-color: $bg-grey;
   color: $dark-grey;
 }
+
+.all-product__plus {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 23px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: $icon-plus-grey;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}

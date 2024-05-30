@@ -1,5 +1,21 @@
 .order-gift {
-  background-color: $basic-green;
+  position: relative;
+  min-height: 280px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ababab;
+  background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/gift-background-mobile@1x.png");
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../icons/stack.svg#gift");
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 
 .order-gift__text {
