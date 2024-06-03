@@ -1,13 +1,13 @@
-.main-nav__link {
-  font-family: $secondary-font;
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: $basic-black;
+.main-nav {
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }
 
 .main-nav__toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
   width: 24px;
   height: 24px;
   padding: 0;
@@ -15,4 +15,53 @@
   border: none;
   background-image: url("../../icons/stack.svg#button-close");
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 436px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__list--background-cat {
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index-background-desktop@1x.jpg");
+      right: 0;
+      top: 0;
+      min-height: 694px;
+      width: 720px;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-color: $basic-green;
+      background-position: center;
+    }
+  }
+}
+
+.main-nav__link {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $basic-black;
+  display: block;
+  padding: 22px 0 24px;
+  text-align: center;
+}
+
+.main-nav__link--color {
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+  }
 }

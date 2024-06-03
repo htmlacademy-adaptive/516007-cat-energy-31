@@ -6,12 +6,13 @@
   position: absolute;
   display: flex;
   width: 4px;
-  height: 256px;
+  height: 100%;
   background-color: $icon-grey;
   border: none;
   padding: 0;
   top: 0;
-  right: 135px;
+  right: 50%;
+  transform: translate(-50%);
   cursor: pointer;
 
   &::before,
@@ -41,4 +42,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.slider__image {
+  margin: 0 auto;
+  display: block;
+}
+
+.slider__image-item--before {
+  display: none;
 }

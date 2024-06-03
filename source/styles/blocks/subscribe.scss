@@ -11,3 +11,21 @@
   line-height: 24px;
   text-align: center;
 }
+
+.subscribe__form {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    width: 632px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 752px;
+  }
+}
+
+.subscribe__email,
+.subscribe__button {
+  width: 100%;
+}
