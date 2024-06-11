@@ -1,32 +1,116 @@
 .main-nav {
   @media (min-width: $tablet-width) {
     margin-left: auto;
+    width: 506px;
   }
 }
 
 .main-nav__toggle {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 23px;
   width: 24px;
-  height: 24px;
+  height: 18px;
   padding: 0;
   background-color: $basic-white;
   border: none;
-  background-image: url("../../icons/stack.svg#button-close");
-  background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $basic-black;
+  box-shadow: 0 8px 0 0 $basic-black, 0 16px 0 0 $basic-black;
+}
+
+.main-nav--opened .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/stack.svg#button-close");
+  right: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-color: $basic-white;
+  box-shadow: none;
+}
+
+.main-nav--opened .main-nav__list {
+  @media (max-width: $mobile-width-only) {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav__list {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  display: block;
+}
+
 .main-nav__list {
+  @media (max-width: $mobile-width-only) {
+    background-color: $basic-white;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
-    width: 436px;
-    justify-content: space-between;
+    justify-content: end;
     flex-wrap: wrap;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: $tablet-width) {
+    margin-left: 13px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.main-nav__item--active {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $basic-green;
+      height: 2px;
+      width: calc(100% - 20px);
+      left: 10px;
+      bottom: 0;
+    }
+  }
+}
+
+.main-nav__item--active-color {
+  @media (min-width: $desktop-width) {
+    &::after {
+      background-color: $basic-white;
+    }
   }
 }
 
@@ -58,6 +142,20 @@
   display: block;
   padding: 22px 0 24px;
   text-align: center;
+  border-top: 1px solid $line-grey;
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+    padding: 10px;
+  }
+}
+
+.main-nav__link--last {
+  @media (min-width: $tablet-width) {
+    &:last-child {
+      padding-right: 0;
+    }
+  }
 }
 
 .main-nav__link--color {

@@ -20,15 +20,18 @@
 }
 
 .promo__wrapper {
+  padding-top: 27px;
+  padding-bottom: 20px;
+
   @media (min-width: $tablet-width) {
     position: relative;
     min-height: 800px;
-    padding: 24px 90px 502px;
+    padding: 40px 90px 610px;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 600px;
-    padding: 20px 610px 95px 80px;
+    min-height: 633px;
+    padding: 80px;
   }
 }
 
@@ -40,6 +43,7 @@
   font-weight: 400;
   text-align: center;
   color: $basic-white;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     width: 420px;
@@ -47,6 +51,7 @@
     line-height: 60px;
     color: $basic-black;
     text-align: left;
+    margin-bottom: 40px;
   }
 }
 
@@ -57,6 +62,7 @@
   text-align: center;
   text-transform: uppercase;
   color: $basic-white;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
     width: 283px;
@@ -72,27 +78,31 @@
     position: absolute;
     z-index: -1;
     left: 50%;
-    transform: translate(-60%);
+    transform: translate(-53%);
+    top: 241px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 70px;
-    transform: translate(-40%);
+    top: 0;
+    transform: translate(-42%);
   }
 }
 
 .promo__link {
   display: block;
   width: 100%;
+  padding: 10px;
 
   @media (min-width: $tablet-width) {
     width: 244px;
     position: absolute;
-    top: 230px;
+    top: 270px;
     left: 90px;
+    padding: 14px;
   }
 
   @media (min-width: $desktop-width) {
     left: 80px;
+    top: 313px;
   }
 }

@@ -1,8 +1,53 @@
+.subscribe {
+  position: relative;
+  padding-bottom: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $basic-green;
+    height: 2px;
+    width: 100vw;
+    top: 15px;
+    z-index: -1;
+    left: calc(50% - 50vw);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 80px;
+
+    &::before {
+      top: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 104px;
+  }
+}
+
 .subscribe__title {
   font-family: $secondary-font;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  margin: 0 0 32px -20px;
+  padding: 0 41px 0 20px;
+  background-color: $basic-white;
+  width: 220px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+    width: 285px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 0 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -40px;
+  }
 }
 
 .subscribe__text {
@@ -10,12 +55,29 @@
   font-size: 16px;
   line-height: 24px;
   text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    width: 532px;
+    margin: 0 auto 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
 }
 
 .subscribe__form {
+  grid-template-rows: repeat(2, 56px);
+  row-gap: 16px;
+  display: grid;
+
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 256px;
     width: 632px;
     margin: 0 auto;
   }
@@ -25,7 +87,20 @@
   }
 }
 
-.subscribe__email,
+.subscribe__email {
+  border: 1px solid $line-grey-3;
+  text-transform: uppercase;
+  color: $dark-grey;
+  padding: 13px;
+  font-family: $secondary-font;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .subscribe__button {
-  width: 100%;
+  border: none;
+  font-size: 20px;
+  line-height: 26px;
+  cursor: pointer;
 }
