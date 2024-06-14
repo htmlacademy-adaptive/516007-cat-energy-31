@@ -1,9 +1,9 @@
 .features {
-  padding-bottom: 49px;
+  padding-bottom: 50px;
 
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $line-grey;
-    padding-bottom: 47px;
+    padding-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
@@ -94,7 +94,7 @@
   @media (min-width: $desktop-width) {
     min-height: 280px;
     grid-template-columns: auto;
-    padding-right: 15px;
+    gap: 25px;
   }
 }
 
@@ -103,14 +103,26 @@
   background-size: 30px 32px;
 }
 
+.features__item--benefit::after {
+  right: 5px;
+}
+
 .features__item--composition::before {
   background-image: url("../../icons/stack.svg#powder");
   background-size: 26px 29px;
 }
 
+.features__item--composition::after {
+  right: 3px;
+}
+
 .features__item--nutrition::before {
   background-image: url("../../icons/stack.svg#cutlery");
   background-size: 25px 30px;
+}
+
+.features__item--nutrition::after {
+  right: -17px;
 }
 
 .features__item--change::before {

@@ -7,4 +7,12 @@
   text-align: center;
   background-color: $basic-green;
   color: $basic-white;
+
+  &:hover {
+    background-color: $hover-green;
+  }
+
+  &:active {
+    color: rgba($basic-white, 0.3);
+  }
 }

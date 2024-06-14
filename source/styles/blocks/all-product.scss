@@ -1,12 +1,12 @@
 .all-product {
   padding-top: 25px;
-  grid-template-rows: 55px auto auto 40px;
+  grid-template-rows: 52px 30px auto 40px;
 
   @media (min-width: $tablet-width) {
     border: 2px solid $bg-grey;
     margin-top: 81px;
     padding-top: 50px;
-    grid-template-rows: 110px auto auto 40px;
+    grid-template-rows: 85px auto 118px 40px;
   }
 
   &::after {
@@ -19,6 +19,10 @@
       bottom: 0;
       left: calc(50% - 50vw);
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: 72px auto 127px 40px;
   }
 }
 
@@ -95,4 +99,8 @@
   color: $dark-grey;
   align-content: center;
   min-height: 40px;
+
+  &:hover {
+    background-color: $line-grey-4;
+  }
 }

@@ -18,12 +18,32 @@
   font-size: 16px;
   line-height: 20px;
   color: $dark-grey;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .developer__link {
   width: 27px;
-  height: 24px;
+  height: 34px;
   display: block;
   background-color: $icon-grey;
   mask-image: url("../../icons/stack.svg#html-academy");
+
+  &:hover {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.developer__name:hover ~ .developer__link {
+  background-color: $basic-green;
+}
+
+.developer__name:active ~ .developer__link {
+  opacity: 0.3;
 }
